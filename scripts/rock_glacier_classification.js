@@ -7,8 +7,8 @@
 // RG/NONRG training polygons and rename them to `geometry`, `RG`, and
 // `NONRG` respectively.
 //
-// Author: GEE_RG_Detection contributors
-// Last updated: 2024-05-01
+// Author: Varun Khajuria
+// Last updated: 11/11/2025
 //
 // ----------------------------------------------------
 // 1. Region of interest
