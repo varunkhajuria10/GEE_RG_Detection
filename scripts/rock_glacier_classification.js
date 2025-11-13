@@ -95,8 +95,8 @@ var embeddingsImage = embeddingsFiltered.mosaic();
 
 var gcpsWithRandom = gcps.randomColumn('random');
 
-var trainingSet = gcpsWithRandom.filter(ee.Filter.lt('random', 0.7));   // 70%
-var validationSet = gcpsWithRandom.filter(ee.Filter.gte('random', 0.7)); // 30%
+var trainingSet = gcpsWithRandom.filter(ee.Filter.lt('random', 0.7)); 
+var validationSet = gcpsWithRandom.filter(ee.Filter.gte('random', 0.7));
 
 // Reduce embeddings over polygons (mean per polygon)
 var training = embeddingsImage.reduceRegions({
@@ -116,6 +116,10 @@ var validation = embeddingsImage.reduceRegions({
 // Filter out polygons that returned null in A00 (very tiny polygons etc.)
 training   = training.filter(ee.Filter.notNull(['A00']));
 validation = validation.filter(ee.Filter.notNull(['A00']));
+
+//sanity checks: counts per class
+print('Training counts by class:', trainingSet.aggregate_histogram('class'));
+print('Validation counts by class:', validationSet.aggregate_histogram('class'));
 
 // ----------------------------------------------------
 // 6. Define and train classifiers
