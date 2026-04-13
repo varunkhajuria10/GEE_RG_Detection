@@ -25,3 +25,7 @@ Exports include:
 ## License
 
 This project is released under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Citation
+
+Khajuria, V., Singh, S., Paro, L. et al. Rock Glacier Detection Using Satellite Embeddings and Machine Learning on Google Earth Engine. Earth Syst Environ (2026). https://doi.org/10.1007/s41748-026-01139-x
