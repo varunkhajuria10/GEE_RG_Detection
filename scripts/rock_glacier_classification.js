@@ -7,7 +7,7 @@
 // RG/NONRG training polygons and rename them to `geometry`, `RG`, and
 // `NONRG` respectively.
 
-// This script contains the Google Earth Engine workflow used for embedding extraction,
+// This script contains only the Google Earth Engine workflow used for embedding extraction,
 // classifier training, validation, and regional classification. Additional analyses reported
 // in the manuscript, including sensitivity tests, bootstrap/OOB uncertainty assessment,
 // post-processing, aggregation tests, and the conventional multi-sensor benchmark,
